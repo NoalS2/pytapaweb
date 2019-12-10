@@ -1,5 +1,4 @@
 function tableCreate() {
-    var body = document.getElementsByTagName("body");
     var tbl = document.createElement("table");
 
     for (let x = 0; x < puzzleWidth; x++) {
