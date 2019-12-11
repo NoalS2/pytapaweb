@@ -2,7 +2,7 @@ var black;
 var white;
 var grey;
 
-var solution = [[1,1,1],[1,8,1],[1,1,1],[1,8,0],[1,1,1]];
+var solution = [[1,22,1,1,1,1],[1,7,1,5,5,1],[1,1,1,0,0,1],[1,0,0,1,1,1],[1,4,31,1,7,1],[1,1,0,1,22,1]];
 
 function tableCreate() {
     var tbl = document.createElement("table");
@@ -49,7 +49,70 @@ function displayHint(x,y) {
     let sol = solution[x][y];
     let cellid = '#' + String(x) + String(y);
     if (sol === 8) {
-        $(cellid).append('<h1>8</h1>');
+        $(cellid).append('<h2>8</h2>');
+    };
+    if (sol === 7) {
+        $(cellid).append('<h2>7</h2>');
+    };
+    if (sol === 6) {
+        $(cellid).append('<h2>6</h2>');
+    };
+    if (sol === 5) {
+        $(cellid).append('<h2>5</h2>');
+    };
+    if (sol === 51) {
+        $(cellid).append('<h2>5    1</h2>');
+    };
+    if (sol === 4) {
+        $(cellid).append('<h2>4</h2>');
+    };
+    if (sol === 41) {
+        $(cellid).append('<h2>4     1</h2>');
+    };
+    if (sol === 42) {
+        $(cellid).append('<h2>4     2</h2>');
+    };
+    if (sol === 3) {
+        $(cellid).append('<h2>3</h2>');
+    };
+    if (sol === 33) {
+        $(cellid).append('<h2>3     3</h2>');
+    };
+    if (sol === 32) {
+        $(cellid).append('<h2>3     2</h2>');
+    };
+    if (sol === 311) {
+        $(cellid).append('<h2>3      1</h2><h2>1</h2>');
+    };
+    if (sol === 31) {
+        $(cellid).append('<h2>3      1</h2>');
+    };
+    if (sol === 22) {
+        $(cellid).append('<h2>2      2</h2>');
+    };
+    if (sol === 2) {
+        $(cellid).append('<h2>2</h2>');
+    };
+    if (sol === 21) {
+        $(cellid).append('<h2>2      1</h2>');
+    };
+    if (sol === 221) {
+        $(cellid).append('<h2>2      2</h2><h2>1</h2>');
+    };
+    if (sol === 211) {
+        $(cellid).append('<h2>2      1</h2><h2>1</h2>');
+    };
+    if (sol === 11) {
+        $(cellid).append('<h2>1</h2>');
+    };
+    if (sol === 111) {
+        $(cellid).append('<h2>1      1</h2>');
+    };
+    if (sol === 1111) {
+        $(cellid).append('<h2>1      1</h2><h2>1</h2>');
+    };
+    if (sol === 11111) {
+        $(cellid).append('<h2>1      1</h2><h2>1     1</h2>');
     };
 };
 
