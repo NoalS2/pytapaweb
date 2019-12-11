@@ -1,3 +1,9 @@
+var black;
+var white;
+var grey;
+
+var solution = [[1,1,1],[1,8,1],[1,1,1]];
+
 function tableCreate() {
     var tbl = document.createElement("table");
 
@@ -8,7 +14,12 @@ function tableCreate() {
         for (var y = 0; y < puzzleHeight; y++) {
             let cell = document.createElement("td");
             cell.id = String(x) + String(y);
-            row.appendChild(cell);
+            let sol = solution[x][y];
+            if (sol > 2) {
+                 cell.classList.add("hint");
+                 console.log(cell.classList.contains('hint'));
+             };
+             row.appendChild(cell)
         };
     };
     
@@ -19,19 +30,21 @@ function changeColor(x,y) {
     let cellId = "#" + String(x) + String(y);
     let color = $(cellId).css("background-color");
     $(cellId).click(function() { 
-        if (color === 'rgb(255, 255, 255)') {
-            $(cellId).css("background-color", "black");
-        } else if ((color === 'rgb(0, 0, 0)')) {
-            $(cellId).css("background-color", "grey");
-        } else {
-            $(cellId).css("background-color", "white");
+        if (this.classList.contains('hint') !== true) {
+            if (color === 'rgb(255, 255, 255)') {
+                $(this).css("background-color", "black");
+            } else if ((color === 'rgb(0, 0, 0)')) {
+                $(this).css("background-color", "grey");
+            } else {
+                $(this).css("background-color", "white");
+            };
         };
     });
 };
 
 var notSolved = true;
-var puzzleHeight = 6;
-var puzzleWidth = 6;
+var puzzleHeight = 3;
+var puzzleWidth = 3;
 
 var table = tableCreate();
 console.log(table);
