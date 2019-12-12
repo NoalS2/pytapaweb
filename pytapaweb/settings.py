@@ -25,7 +25,7 @@ SECRET_KEY = 'c^1#j+-xc2!5j3d-fwgqhazb5hd&3_l)=*2gg!*ajz$uw92de)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pytapa.com', '167.172.210.137', 'www.pytapa.com']
+ALLOWED_HOSTS = ['pytapa.com', '167.172.210.137', 'www.pytapa.com', '127.0.0.1']
 
 
 # Application definition
