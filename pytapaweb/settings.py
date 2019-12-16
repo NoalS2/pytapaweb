@@ -55,7 +55,7 @@ ROOT_URLCONF = 'pytapaweb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['pytapaweb/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
