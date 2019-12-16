@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% load static %}
 
+<style>
+    table { border-collapse: collapse; font-family: Calibri, sans-serif; }
+    td { border: solid thin; height: 6em; width: 6em; text-align: center; padding: 0; background-color: white}
+    </style>
 <h1>Rules of Tapa</h1>
 <ol>
     <li>Blacken tiles to create a continuous path around the board.</li>
@@ -9,10 +14,12 @@
     <li>Use hints to determine the length of consecutive blackened tiles.</li>
     <div id="rule2"></div>
     <li>If a hint uses more than one number then there must be a white tile between the blackened tiles.</li>
-    <div id="rule3"></div>
+    <div id="rule3"></div><p>*Remember that the black tiles must form a continuous path.</p>
     <li>Blackened tiles must not form a 2x2 square anywhere on the board.</li>
-    <div id="rule3"></div>
+    <div id="rule4"></div>
 </ol>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="{% static 'tapa.js' %}"></script> 
 
 {% load static %}
 

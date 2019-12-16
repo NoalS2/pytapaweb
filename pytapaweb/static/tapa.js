@@ -121,7 +121,7 @@ function tapa(solution, ident) {
         for (let x = 0; x < puzzleWidth; x++) {
             for (var y = 0; y < puzzleHeight; y++) {
                 let cellId = identity + String(x) + String(y);
-                if (solution[x][y] > 2) {
+                if (solution[x][y] > 1) {
                     solved.push(0);
                 } else if (solution[x][y] === 1) {
                     if ($(cellId).css('background-color') === 'rgb(0, 0, 0)') {
@@ -176,7 +176,14 @@ function tapa(solution, ident) {
 };
 
 
-tapa([[1,1,1],[1,8,1],[1,1,1]], 'daily')
+tapa([[1,1,1],[1,8,1],[1,1,1]], 'daily');
+tapa([[1,1,1],[1,8,1],[1,1,1]], 'rule1');
+tapa([[1,1,3],[5,1,1],[1,1,3]], 'rule2');
+tapa([[1,22,1],[1,0,1],[1,1,1]], 'rule3');
+tapa([[1,1,1,0],[1,0,1,4],[31,1,1,1],[1,1,0,2]], 'rule4');
+
+
+
 
 
 
