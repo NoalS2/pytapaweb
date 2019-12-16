@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['pytapa.com', '167.172.210.137', 'www.pytapa.com', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'tutorial.apps.TutorialConfig',
     'tapa.apps.TapaConfig',
     'django.contrib.admin',
     'django.contrib.auth',

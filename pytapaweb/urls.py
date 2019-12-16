@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('tapa/', include('tapa.urls')),
     path('', views.home, name="home"),
+    path('tutorial/', include('tutorial.urls')),
 ]
