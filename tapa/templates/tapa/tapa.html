@@ -5,14 +5,15 @@
 {% load static %}
 
 <div class="d-flex justify-content-center"></div>
-  <body id="body">
+  <div id="daily">Daily Puzzle
     <style>
       table { border-collapse: collapse; font-family: Calibri, sans-serif; }
       td { border: solid thin; height: 6em; width: 6em; text-align: center; padding: 0; background-color: white}
       </style>
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-      <script src="{% static 'tapa.js' %}"></script>
-  </body>
+      <script src="{% static 'tapa.js' %}"></script>   
+  </div>
+  
 </div>
 
 {% endblock %}
