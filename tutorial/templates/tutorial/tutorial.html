@@ -1,1 +1,19 @@
-tutorial
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Rules of Tapa</h1>
+<ol>
+    <li>Blacken tiles to create a continuous path around the board.</li>
+    <div id="rule1"></div>
+    <li>Use hints to determine the length of consecutive blackened tiles.</li>
+    <div id="rule2"></div>
+    <li>If a hint uses more than one number then there must be a white tile between the blackened tiles.</li>
+    <div id="rule3"></div>
+    <li>Blackened tiles must not form a 2x2 square anywhere on the board.</li>
+    <div id="rule3"></div>
+</ol>
+
+{% load static %}
+
+{% endblock %}
