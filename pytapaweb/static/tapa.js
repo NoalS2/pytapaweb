@@ -216,11 +216,12 @@ function tapa(solution, ident, buttonid) {
 
 function startButton(buttonid) {
     $(buttonid).click(function () {
-        tapa([[111,1,1,0,1,3],[1,0,1,1,1,1],[1,1,22,31,0,1],[0,1,31,3,1,1],[1,1,0,1,1,0],[3,1,1,1,0,11]], 'daily', '#dailybutton');
+        tapa(today, 'daily', '#dailybutton');
     }); 
 };
 
-
+var yesterday = [[111,1,1,0,1,3],[1,0,1,1,1,1],[1,1,22,31,0,1],[0,1,31,3,1,1],[1,1,0,1,1,0],[3,1,1,1,0,11]]
+var today = [[1,1,1,0,1,1],[1,7,1,51,6,1],[1,42,1,1,1,1],[1,1,0,1,6,1],[1,6,311,0,311,1],[1,1,1,1,0,1]]
 startButton('#startbutton');
 
 
