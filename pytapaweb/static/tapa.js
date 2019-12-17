@@ -36,6 +36,8 @@ function tapa(solution, ident, buttonid) {
                 case 1:
                     if (this.classList.contains('hint') !== true) {
                         if (color === 'rgb(0, 0, 0)') {
+                            $(this).css("background-color", "grey");
+                        } else if (color === 'rgb(128, 128, 128)') {
                             $(this).css("background-color", "white");
                         } else {
                             $(this).css("background-color", "black");
