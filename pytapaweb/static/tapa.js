@@ -2,7 +2,7 @@ var black;
 var white;
 var grey;
 
-function tapa(solution, ident) {
+function tapa(solution, ident, buttonid) {
 
     let identity = "#" + ident
 
@@ -31,18 +31,32 @@ function tapa(solution, ident) {
     function changeColor(x,y) {
         let cellId = "#" + ident + String(x) + String(y);
         let color = $(cellId).css("background-color");
-        $(cellId).click(function() { 
-            if (this.classList.contains('hint') !== true) {
-                if (color === 'rgb(255, 255, 255)') {
-                    $(this).css("background-color", "black");
-                } else if ((color === 'rgb(0, 0, 0)')) {
-                    $(this).css("background-color", "grey");
-                } else {
-                    $(this).css("background-color", "white");
-                };
+        $(cellId).mousedown(function (event) {
+            switch (event.which) {
+                case 1:
+                    if (this.classList.contains('hint') !== true) {
+                        if (color === 'rgb(0, 0, 0)') {
+                            $(this).css("background-color", "white");
+                        } else {
+                            $(this).css("background-color", "black");
+                        };
+                    };
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    if (this.classList.contains('hint') !== true) {
+                        if (color === 'rgb(128, 128, 128)') {
+                            $(this).css("background-color", "white");
+                        } else {
+                            $(this).css("background-color", "grey");
+                        };
+                    };
+                    break;      
             };
         });
     };
+
 
     function displayHint(x,y) {
         let sol = solution[x][y];
@@ -161,26 +175,42 @@ function tapa(solution, ident) {
         };
     };
 
-
-    $(identity).click(function () {
-        for (let x = 0; x < puzzleWidth; x++) {
-                for (var y = 0; y < puzzleHeight; y++) {
-                    changeColor(x,y);
-                };
-        };
+    $(buttonid).click(function () {
         solved = checkSolution();
         if (solved === true && $(identity).find("h1").length === 0) {
             $(identity).append('<h1>You solved it!</h1>')
         }
     });
+
+
+    $(identity).mousedown(function (event) {
+        switch (event.which) {
+            case 1:
+                for (let x = 0; x < puzzleWidth; x++) {
+                        for (var y = 0; y < puzzleHeight; y++) {
+                            changeColor(x,y);
+                        };
+                };
+                break;
+            case 2:
+                break;
+            case 3:
+                for (let x = 0; x < puzzleWidth; x++) {
+                    for (var y = 0; y < puzzleHeight; y++) {
+                        changeColor(x,y);
+                    };
+                };
+                break;      
+        };
+    });
 };
 
 
-tapa([[111,1,1,0,1,3],[1,0,1,1,1,1],[1,1,22,31,0,1],[0,1,31,3,1,1],[1,1,0,1,1,0],[3,1,1,1,0,11]], 'daily');
-tapa([[1,1,1],[1,8,1],[1,1,1]], 'rule1');
-tapa([[1,1,3],[5,1,1],[1,1,3]], 'rule2');
-tapa([[1,22,1],[1,0,1],[1,1,1]], 'rule3');
-tapa([[0,1,3],[1,1,1],[3,1,0]], 'rule4');
+tapa([[111,1,1,0,1,3],[1,0,1,1,1,1],[1,1,22,31,0,1],[0,1,31,3,1,1],[1,1,0,1,1,0],[3,1,1,1,0,11]], 'daily', '#dailybutton');
+tapa([[1,1,1],[1,8,1],[1,1,1]], 'rule1', '#button1');
+tapa([[1,1,3],[5,1,1],[1,1,3]], 'rule2', '#button2');
+tapa([[1,22,1],[1,0,1],[1,1,1]], 'rule3', '#button3');
+tapa([[0,1,3],[1,1,1],[3,1,0]], 'rule4', '#button4');
 
 
 

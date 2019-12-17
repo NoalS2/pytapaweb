@@ -9,15 +9,20 @@
     </style>
 <h1>Rules of Tapa</h1>
 <p>Tapa is a puzzle where you use number hints to draw a single complete path through the grid until all the hints are satisfied.</p>
+<p>Puzzles in this tutorial are interactive. Click once to blacken a tile.</p>
 <ol>
     <li>In the first example the number 8 is the given hint.</li>
-    <div id="rule1"></div>
+    <div id="rule1" oncontextmenu="return false;"></div>
+    <button id='button1'>Check</button>
     <li>Hints determine how many of the surrounding tiles are colored in. So in this puzzle the 5 tiles around the "5" hint are filled in and so on. Hints which are as big as the number of adjecent tiles are especially powerful for this reason.</li>
-    <div id="rule2"></div>
+    <div id="rule2" oncontextmenu="return false";></div>
+    <button id='button2'>Check</button>
     <li>If a hint uses more than one number then there must be a white tile between the blackened tiles. For the hint "2 2", there must be 2 sets of 2 tiles, with a white tile between them.</li>
-    <div id="rule3"></div><p>*Dont forget that the black tiles must form one continuous path across the puzzle.</p>
+    <div id="rule3" oncontextmenu="return false";></div><p>*Dont forget that the black tiles must form one continuous path across the puzzle.</p>
+    <button id='button3'>Check</button>
     <li>For this puzzle the two corner tiles are white because of the last rule, that at no time can there be a 2x2 square of blackened tiles.</li>
-    <div id="rule4"></div>
+    <div id="rule4" oncontextmenu="return false;"></div>
+    <button id='button4'>Check</button>
 </ol>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="{% static 'tapa.js' %}"></script> 
