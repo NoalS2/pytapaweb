@@ -180,7 +180,7 @@ function tapa(solution, ident, buttonid) {
     $(buttonid).click(function () {
         solved = checkSolution();
         if (solved === true && $(identity).find("h1").length === 0) {
-            $(identity).append('<h1>You solved it!</h1>')
+            $(identity).append('<h1>You solved it!</h1>');
         }
     });
 
@@ -205,14 +205,23 @@ function tapa(solution, ident, buttonid) {
                 break;      
         };
     });
+    
+    let start = new Date;
+
+    setInterval(function() {
+        $('#timer').text(parseInt((new Date - start) / 1000) + " Seconds");
+    }, 1000);
+
+};
+
+function startButton(buttonid) {
+    $(buttonid).click(function () {
+        tapa([[111,1,1,0,1,3],[1,0,1,1,1,1],[1,1,22,31,0,1],[0,1,31,3,1,1],[1,1,0,1,1,0],[3,1,1,1,0,11]], 'daily', '#dailybutton');
+    }); 
 };
 
 
-tapa([[111,1,1,0,1,3],[1,0,1,1,1,1],[1,1,22,31,0,1],[0,1,31,3,1,1],[1,1,0,1,1,0],[3,1,1,1,0,11]], 'daily', '#dailybutton');
-tapa([[1,1,1],[1,8,1],[1,1,1]], 'rule1', '#button1');
-tapa([[1,1,3],[5,1,1],[1,1,3]], 'rule2', '#button2');
-tapa([[1,22,1],[1,0,1],[1,1,1]], 'rule3', '#button3');
-tapa([[0,1,3],[1,1,1],[3,1,0]], 'rule4', '#button4');
+startButton('#startbutton');
 
 
 
