@@ -220,12 +220,7 @@ function startButton(buttonid) {
     }); 
 };
 
-
-startButton('#startbutton');
-
-
-
-
-
-
-
+tapa([[1,1,1],[1,8,1],[1,1,1]], 'rule1', '#button1');
+tapa([[1,1,3],[5,1,1],[1,1,3]], 'rule2', '#button2');
+tapa([[1,22,1],[1,0,1],[1,1,1]], 'rule3', '#button3');
+tapa([[0,1,3],[1,1,1],[3,1,0]], 'rule4', '#button4');
