@@ -217,6 +217,8 @@ function tapa(solution, ident, buttonid) {
 function startButton(buttonid) {
     $(buttonid).click(function () {
         tapa(today, 'daily', '#dailybutton');
+        $(buttonid).attr("hidden",true);
+        $('#dailybutton').attr("hidden",false);
     }); 
 };
 
