@@ -17,7 +17,7 @@ function tapa(solution, ident) {
                 let cell = document.createElement("td");
                 cell.id = ident + String(x) + String(y);
                 let sol = solution[x][y];
-                if (sol > 2) {
+                if (sol > 1) {
                     cell.classList.add("hint");
                 };
 
@@ -180,7 +180,7 @@ tapa([[111,1,1,0,1,3],[1,0,1,1,1,1],[1,1,22,31,0,1],[0,1,31,3,1,1],[1,1,0,1,1,0]
 tapa([[1,1,1],[1,8,1],[1,1,1]], 'rule1');
 tapa([[1,1,3],[5,1,1],[1,1,3]], 'rule2');
 tapa([[1,22,1],[1,0,1],[1,1,1]], 'rule3');
-tapa([[1,1,1,0],[1,0,1,4],[31,1,1,1],[1,1,0,2]], 'rule4');
+tapa([[0,1,3],[1,1,1],[3,1,0]], 'rule4');
 
 
 
