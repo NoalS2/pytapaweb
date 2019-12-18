@@ -7,26 +7,33 @@
     table { border-collapse: collapse; font-family: Calibri, sans-serif; }
     td { border: solid thin; height: 6em; width: 6em; text-align: center; padding: 0; background-color: white}
     </style>
-<h1>Rules of Tapa</h1>
+<div class="container center d-flex justify-content-center">
+    <h1>Rules of Tapa</h1>
+</div>
+<div class="container center d-flex justify-content-center">   
+    <img src="{% static 'tapaexample.jpg' %}" height=400 width=400/>
+</div>    
 <p>Tapa is a puzzle where you use number hints to draw a single complete path through the grid until all the hints are satisfied.</p>
 <p>Puzzles in this tutorial are interactive. Left-click to blacken a tile and right-click to make the tile grey, marking it as not a part of the solution.</p>
-<ol>
-    <li>In the first example the number 8 is the given hint.</li>
-    <div id="rule1" oncontextmenu="return false;" class="pb-1"></div>
-    <button id='button1'>Check</button>
-    <br>
-    <li>Hints determine how many of the surrounding tiles are colored in. So in this puzzle the 5 tiles around the "5" hint are filled in and so on. Hints which are as big as the number of adjecent tiles are especially powerful for this reason.</li>
-    <div id="rule2" oncontextmenu="return false"; class="pb-1"></div>
-    <button id='button2'>Check</button>
-    <br>
-    <li>If a hint uses more than one number then there must be a white tile between the blackened tiles. For the hint "2 2", there must be 2 sets of 2 tiles, with a white tile between them.</li>
-    <div id="rule3" oncontextmenu="return false"; class="pb-1"></div><p>*Dont forget that the black tiles must form one continuous path across the puzzle.</p>
-    <button id='button3'>Check</button>
-    <br>
-    <li>For this puzzle the two corner tiles are white because of the last rule, that at no time can there be a 2x2 square of blackened tiles.</li>
-    <div id="rule4" oncontextmenu="return false;" class="pb-1"></div>
-    <button id='button4'>Check</button>
-</ol>
+<div class="container">
+    <ol>
+        <li>In the first example the number 8 is the given hint.</li>
+        <div id="rule1" oncontextmenu="return false;" class="pb-1"></div>
+        <button id='button1'>Check</button>
+        <br>
+        <li>Hints determine how many of the surrounding tiles are colored in. So in this puzzle the 5 tiles around the "5" hint are filled in and so on. Hints which are as big as the number of adjecent tiles are especially powerful for this reason.</li>
+        <div id="rule2" oncontextmenu="return false"; class="pb-1"></div>
+        <button id='button2'>Check</button>
+        <br>
+        <li>If a hint uses more than one number then there must be a white tile between the blackened tiles. For the hint "2 2", there must be 2 sets of 2 tiles, with a white tile between them.</li>
+        <div id="rule3" oncontextmenu="return false"; class="pb-1"></div><p>*Dont forget that the black tiles must form one continuous path across the puzzle.</p>
+        <button id='button3'>Check</button>
+        <br>
+        <li>For this puzzle the two corner tiles are white because of the last rule, that at no time can there be a 2x2 square of blackened tiles.</li>
+        <div id="rule4" oncontextmenu="return false;" class="pb-1"></div>
+        <button id='button4'>Check</button>
+    </ol>
+</div>
 <h2>Practice Puzzle: </h2>
 <div id='hints'></div>
 <div id="practice" oncontextmenu="return false;" class="pb-1"></div>

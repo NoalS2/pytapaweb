@@ -4,7 +4,7 @@ var black;
 var white;
 var grey;
 var yesterday = [[111,1,1,0,1,3],[1,0,1,1,1,1],[1,1,22,31,0,1],[0,1,31,3,1,1],[1,1,0,1,1,0],[3,1,1,1,0,11]];
-var today = [[1,1,1,0,1,1],[1,7,1,51,6,1],[1,42,1,1,1,1],[1,1,0,1,6,1],[1,6,311,0,311,1],[1,1,1,1,0,1]];
+var today = [[1,1,1,22,1,0],[1,8,1,0,1,1],[1,1,1,1,1,5],[1,0,1,0,1,1],[31,1,1,32,1,4],[1,1,0,1,1,0]];
 
 // This function represents the entire creation of the Tapa puzzle
 function tapa(solution, ident, buttonid) {
