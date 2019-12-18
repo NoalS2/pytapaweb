@@ -206,7 +206,7 @@ function tapa(solution, ident, buttonid) {
     
     $('#button5').click(function () {
         solved = checkSolution();
-        if (solved === true && $('#button5').find("h1").length === 0) {
+        if (solved === true && $('#congrats').find("h1").length === 0) {
             $('#congrats').append('<h1>You solved it!</h1>');
         };
     });
