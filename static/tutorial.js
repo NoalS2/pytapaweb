@@ -166,8 +166,6 @@ function tapa(solution, ident, buttonid) {
 
     let table = tableCreate();
 
-    console.log(table);
-
     $(identity).append(table);
 
     for (let x = 0; x < puzzleWidth; x++) {
@@ -224,3 +222,4 @@ tapa([[1,1,1],[1,8,1],[1,1,1]], 'rule1', '#button1');
 tapa([[1,1,3],[5,1,1],[1,1,3]], 'rule2', '#button2');
 tapa([[1,22,1],[1,0,1],[1,1,1]], 'rule3', '#button3');
 tapa([[0,1,3],[1,1,1],[3,1,0]], 'rule4', '#button4');
+tapa([[1,1,1,0],[1,0,1,4],[31,1,1,1],[1,1,0,2]], 'practice', '#button5');
