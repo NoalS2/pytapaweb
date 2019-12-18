@@ -7,14 +7,14 @@
     table { border-collapse: collapse; font-family: Calibri, sans-serif; }
     td { border: solid thin; height: 6em; width: 6em; text-align: center; padding: 0; background-color: white}
     </style>
-<div class="container center d-flex justify-content-center">
+<div class="container d-flex justify-content-center">
     <h1>Rules of Tapa</h1>
 </div>
-<div class="container center d-flex justify-content-center" id="example puzzle">
+<div class="container d-flex justify-content-center" id="example puzzle">
     <img src="{% static 'tapaexample.JPG' %}" height=400 width=400/>   
 </div>    
 <p>Tapa is a puzzle where you use number hints to draw a single complete path through the grid until all the hints are satisfied. Puzzles in this tutorial are interactive. Left-click to blacken a tile and right-click to make the tile grey, marking it as not a part of the solution.</p>
-<div class="container">
+<div class="container d-flex justify-content-center">
     <ol>
         <li>In the first example the number 8 is the given hint.</li>
         <div id="rule1" oncontextmenu="return false;" class="pb-1"></div>
@@ -33,11 +33,16 @@
         <button id='button4'>Check</button>
     </ol>
 </div>
-<h2>Practice Puzzle: </h2>
-<div id='hints'></div>
-<div id="practice" oncontextmenu="return false;" class="pb-1"></div>
-<button id='help'>Help</button>
-<button id='button5'>Check</button>
+<div class="container d-flex justify-content-center">
+<h2>Practice Puzzle: </h2></div>
+<div id='hints' class="container d-flex justify-content-center"></div>
+<div id="practice" oncontextmenu="return false;" class="container d-flex justify-content-center pb-1"></div>
+<div class="container d-flex justify-content-center">
+    <button id='help'>Help</button>
+    <button id='button5'>Check</button>
+</div>
+<br>
+
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="{% static 'tutorial.js' %}"></script> 
