@@ -204,12 +204,12 @@ function tapa(solution, ident, buttonid) {
         };
     });
     
-    let start = new Date;
-
-    setInterval(function() {
-        $('#timer').text(parseInt((new Date - start) / 1000) + " Seconds");
-    }, 1000);
-
+    $('#button5').click(function () {
+        solved = checkSolution();
+        if (solved === true && $(identity).find("h1").length === 0) {
+            $('#congrats').append('<h1>You solved it!</h1>');
+        };
+    });
 };
 
 function startButton(buttonid) {
@@ -227,15 +227,15 @@ function help(solution) {
             let cellId = '#practice' + String(x) + String(y);
             if (x === 0 && y === 2) {
                 if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(128, 128, 128)') {
-                    return '<p>The hint "4" only touches 5 squares, therefore you know that 3 of those squares are part of the solution.</p>';
+                    return '<p>The "4" hint is touching 5 squares. This means of the 5 available squares 4 of them will be blackened. Because of this the middle 3 squares will always be black.</p>';
                 };
             } else if (x === 1 && y === 2) {
                 if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(128, 128, 128)') {
-                    return '<p>The hint "4" only touches 5 squares, therefore you know that 3 of those squares are part of the solution.</p>';
+                    return '<p>The "4" hint is touching 5 squares. This means of the 5 available squares 4 of them will be blackened. Because of this the middle 3 squares will always be black.</p>';
                 };
             } else if (x === 2 && y === 2) {
                 if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(128, 128, 128)') {
-                    return '<p>The hint "4" only touches 5 squares, therefore you know that 3 of those squares are part of the solution.</p>';
+                    return '<p>The "4" hint is touching 5 squares. This means of the 5 available squares 4 of them will be blackened. Because of this the middle 3 squares will always be black.</p>';
                 };
             };
         };
@@ -246,7 +246,7 @@ function help(solution) {
             let cellId = '#practice' + String(x) + String(y);       
             if (x === 2 && y === 1) {
                 if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(128, 128, 128)') {
-                    return '<p>The hint "3 1" only touches 5 squares, therefore you know that 1 of those squares is part of the solution.</p>';
+                    return '<p>The "3" hint is touching 5 squares. This means of the 5 available squares 3 of them will be blackened. Because of this the middle square will always be black.</p>';
                 };
             };
         };
@@ -257,7 +257,7 @@ function help(solution) {
             let cellId = '#practice' + String(x) + String(y);
             if (x === 1 && y === 1) {
                 if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(0, 0, 0)') {
-                    return '<p>Remember that you can never have a 2x2 block of black tiles.</p><p>Mark any tiles you know are not part of the solution grey.</p>';
+                    return '<p>Remember that you can never have a 2x2 block of black tiles. Mark any tiles you know are not part of the solution grey.</p>';
                 };
             };
         };
@@ -315,21 +315,22 @@ function help(solution) {
             if (x === 2 && y === 3) {
                 if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(128, 128, 128)') {
                     return '<p>The "2" hint is now complete because there are 2 available tiles and there should be 2 black tiles next to it.</p>';
-                } else {
-                    return '<p>The puzzle is complete.</p>';
-                };
+                }
             };
         };
     };
+
 };    
 
 tapa([[1,1,1],[1,8,1],[1,1,1]], 'rule1', '#button1');
 tapa([[1,1,3],[5,1,1],[1,1,3]], 'rule2', '#button2');
 tapa([[1,22,1],[1,0,1],[1,1,1]], 'rule3', '#button3');
 tapa([[0,1,3],[1,1,1],[3,1,0]], 'rule4', '#button4');
-tapa([[1,1,1,0],[1,0,1,4],[31,1,1,1],[1,1,0,2]], 'practice', '#button5');
+tapa([[1,1,1,0],[1,0,1,4],[31,1,1,1],[1,1,0,2]], 'practice', '#button6');
 
 $('#help').click(function () {
     $('#hints').html(help(practiceSolution));
 });
+
+
 
