@@ -218,8 +218,117 @@ function startButton(buttonid) {
     }); 
 };
 
+var practiceSolution = [[1,1,1,0],[1,0,1,4],[31,1,1,1],[1,1,0,2]];
+
+function help(solution) {
+    // This for loop gives a hint for the first step of the puzzle.
+    for (let x = 0; x < solution.length; x++) {
+        for (var y = 0; y < solution[0].length; y++) {
+            let cellId = '#practice' + String(x) + String(y);
+            if (x === 0 && y === 2) {
+                if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(128, 128, 128)') {
+                    return '<p>The hint "4" only touches 5 squares, therefore you know that 3 of those squares are part of the solution.</p>';
+                };
+            } else if (x === 1 && y === 2) {
+                if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(128, 128, 128)') {
+                    return '<p>The hint "4" only touches 5 squares, therefore you know that 3 of those squares are part of the solution.</p>';
+                };
+            } else if (x === 2 && y === 2) {
+                if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(128, 128, 128)') {
+                    return '<p>The hint "4" only touches 5 squares, therefore you know that 3 of those squares are part of the solution.</p>';
+                };
+            };
+        };
+    };
+    // This for loop gives a hint for the second step of the puzzle.
+    for (let x = 0; x < solution.length; x++) {
+        for (var y = 0; y < solution[0].length; y++) {
+            let cellId = '#practice' + String(x) + String(y);       
+            if (x === 2 && y === 1) {
+                if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(128, 128, 128)') {
+                    return '<p>The hint "3 1" only touches 5 squares, therefore you know that 1 of those squares is part of the solution.</p>';
+                };
+            };
+        };
+    };
+    // This for loop gives a hint for the third step of the puzzle.
+    for (let x = 0; x < solution.length; x++) {
+        for (var y = 0; y < solution[0].length; y++) {
+            let cellId = '#practice' + String(x) + String(y);
+            if (x === 1 && y === 1) {
+                if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(0, 0, 0)') {
+                    return '<p>Remember that you can never have a 2x2 block of black tiles.</p><p>Mark any tiles you know are not part of the solution grey.</p>';
+                };
+            };
+        };
+    };
+    // This for loop gives a hint for the fourth step of the puzzle.
+    for (let x = 0; x < solution.length; x++) {
+        for (var y = 0; y < solution[0].length; y++) {
+            let cellId = '#practice' + String(x) + String(y);
+            if (x === 1 && y === 0) {
+                if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(128, 128, 128)') {
+                    return '<p>The "3 1" hint is now complete because there are 4 available tiles and there should be 4 black tiles next to it.</p>';
+                };
+            }else if (x === 3 && y === 0) {
+                if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(128, 128, 128)') {
+                    return '<p>The "3 1" hint is now complete because there are 4 available tiles and there should be 4 black tiles next to it.</p>';
+                };
+            }else if (x === 3 && y === 1) {
+                if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(128, 128, 128)') {
+                    return '<p>The "3 1" hint is now complete because there are 4 available tiles and there should be 4 black tiles next to it.</p>';
+                };
+            };
+        };
+    };
+    // This for loop gives a hint for the fifth step of the puzzle.
+    for (let x = 0; x < solution.length; x++) {
+        for (var y = 0; y < solution[0].length; y++) {
+            let cellId = '#practice' + String(x) + String(y);
+            if (x === 0 && y === 0) {
+                if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(128, 128, 128)') {
+                    return '<p>The solution must be a continuous line.</p>';
+                };
+            };
+            if (x === 0 && y === 1) {
+                if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(128, 128, 128)') {
+                    return '<p>The solution must be a continuous line.</p>';
+                };
+            };
+        };
+    };
+    // This for loop gives a hint for the sixth step of the puzzle.
+    for (let x = 0; x < solution.length; x++) {
+        for (var y = 0; y < solution[0].length; y++) {
+            let cellId = '#practice' + String(x) + String(y);
+            if (x === 3 && y === 2) {
+                if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(0, 0, 0)') {
+                    return '<p>Remember that you can never have a 2x2 block of black tiles.</p><p>Mark any tiles you know are not part of the solution grey.</p>';
+                };
+            };
+        };
+    };
+    // This for loop gives the hint for the last step of the puzzle.
+    for (let x = 0; x < solution.length; x++) {
+        for (var y = 0; y < solution[0].length; y++) {
+            let cellId = '#practice' + String(x) + String(y);
+            if (x === 2 && y === 3) {
+                if ($(cellId).css('background-color') === 'rgb(255, 255, 255)' || $(cellId).css('background-color') === 'rgb(128, 128, 128)') {
+                    return '<p>The "2" hint is now complete because there are 2 available tiles and there should be 2 black tiles next to it.</p>';
+                } else {
+                    return '<p>The puzzle is complete.</p>';
+                };
+            };
+        };
+    };
+};    
+
 tapa([[1,1,1],[1,8,1],[1,1,1]], 'rule1', '#button1');
 tapa([[1,1,3],[5,1,1],[1,1,3]], 'rule2', '#button2');
 tapa([[1,22,1],[1,0,1],[1,1,1]], 'rule3', '#button3');
 tapa([[0,1,3],[1,1,1],[3,1,0]], 'rule4', '#button4');
 tapa([[1,1,1,0],[1,0,1,4],[31,1,1,1],[1,1,0,2]], 'practice', '#button5');
+
+$('#help').click(function () {
+    $('#hints').html(help(practiceSolution));
+});
