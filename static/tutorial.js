@@ -332,3 +332,4 @@ tapa([[1,1,1,0],[1,0,1,4],[31,1,1,1],[1,1,0,2]], 'practice', '#button5');
 $('#help').click(function () {
     $('#hints').html(help(practiceSolution));
 });
+
