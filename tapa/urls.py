@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns = [
     path('', views.tapa, name='tapa'),
-    path('<int:tapa_id>/', views.daily, name='daily'),
+    path('daily/', views.daily, name='daily'),
+    path('<int:tapa_id>/', views.saved, name='saved'),
 ]

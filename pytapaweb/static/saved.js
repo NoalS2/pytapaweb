@@ -24,6 +24,14 @@ for (let x = 0; x < size; x++) {
     finaleToday.push(arr);
 };
 
+
+
+console.log(finaleToday, "finale today")
+console.log(typeof finaleToday)
+
+
+
+
 // This function represents the entire creation of the Tapa puzzle
 function tapa(solution, ident, buttonid) {
 

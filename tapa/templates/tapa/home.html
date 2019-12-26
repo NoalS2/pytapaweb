@@ -2,7 +2,12 @@
 
 {% block content %}
 
-home
+{% for tapa in tapas.all %}
+    <div>
+        <a href="tapa/{{ tapa.id }}" style="color: black;"><h1 >{{ tapa.title }}</h1></a>
+    </div>
+
+{% endfor %}
 
 {% endblock %}
 
