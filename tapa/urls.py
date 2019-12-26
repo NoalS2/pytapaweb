@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     path('', views.tapa, name='tapa'),
+    path('<int:tapa_id>/', views.daily, name='daily'),
 ]

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<h1>{{ tapa.title }}</h1>
+<p id='solution' hidden>{{ tapa.solution }}</p>
+<button id='startbutton'>Start Puzzle</button>
+<br>  
+<div id="timer" class="pb-1"></div>
+  <div id="daily" oncontextmenu="return false;" class="pb-1">
+    <style>
+      table { border-collapse: collapse; font-family: Calibri, sans-serif; }
+      td { border: solid thin; height: 6em; width: 6em; text-align: center; padding: 0; background-color: white}
+      </style>
+      
+       
+  </div>
+  <button id='dailybutton' hidden>Check</button>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="{% static 'daily.js' %}"></script>  
+{% endblock %}
